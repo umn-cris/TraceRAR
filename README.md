@@ -71,7 +71,7 @@ Please cite the work if you use the tool:
   organization={IEEE}
 }
 ```
-Please also find the related work, hfplay (https://github.com/umn-cris/hfplayer) and the corresponding paper in the 15th USENIX Conference on File and Storage Technologies (FAST'17). https://www.usenix.org/conference/fast17/technical-sessions/presentation/haghdoost
+Please also find the related work, hfplayer (https://github.com/umn-cris/hfplayer) and the corresponding paper in the 15th USENIX Conference on File and Storage Technologies (FAST'17). https://www.usenix.org/conference/fast17/technical-sessions/presentation/haghdoost
 
 License
 =======
