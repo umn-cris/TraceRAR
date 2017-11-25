@@ -42,23 +42,6 @@ For x86:
 5. Go to bin/, type ./run.sh to run the tool.
 
 
-Other things:
-1.	Change the block layer queue depths(default value is 128)
-sudo sh
-echo 4096 >  /sys/block/sda/queue/nr_requests
-2.	Change the device queue depths
-sudo sh
-echo 64 > /sys/block/sda/device/queue_depth
-3.	I have commented controller load control in line 1070 in /c/hfcore.cc. If you want to open it, just uncomment it and make file again
-4.	Line 394 in /c/hfcore.cc is to print issue time details for all requests. If want to check details, just uncomment it.
-5.	Using # to comment other lines in file “sampleConf-sda8.cvs” if just want to test only one LUN
-6.	In run.sh, the trace file names:.
-      1.	total.csv is real trace provide by Farnaz.
-      2.	total_small2.csv is first 32769 requests of total.csv
-
-
-
-
 Support
 =======
 Please post your question in the github Issues page. 
