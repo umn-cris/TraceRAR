@@ -12,9 +12,7 @@ http://cris.cs.umn.edu
 About
 ========
 
-The goal of this study is to develop a scalable, timing accurate, replay engine that can faithfully preserve important characteristics of the original block workload trace. Developing a high fidelity replay tool is quite challenging for high performance storage systems. Because actual workload that hit the storage system is a mixed IO operation of multiple hosts which might have millions of IO operation per second and thousands of IO operation in-flight at a certain time. Therefore, faithfully replay a workload from as few as possible hosts is quite difficult which requires well understanding of IO subsystem operations and latency.  Although it is prevalent to replay traces at the level which the traces were captured, replay the trace at the controller level is not feasible because of the hardware limitation of storage system controller. On the other hand, replay the trace from the kernel space is not appropriate because of the portability issue. Therefore, we have developed a tool to replay a workload trace from user space and monitor kernel IO stack to maintain the replay fidelitys. 
-
-This project has been sponsered by Center for Research in Intelligent Storage (CRIS) and made open-source by CRIS member committee. 
+The purpose of this project is using I/O workload analyzer/replayer tells customer how the application's storage performance will change on new system without running Customer’s actual application. The implementation of replayer tool is to use the existing CRIS storage I/O hfreplay to run on PowerPC systems. The challenge of this project is to support different operating systems such LINUX and AIX OS. Each operating system contains different functions, libraries and may also cause fidelity variance. 
 
 
 Setup and Run:
