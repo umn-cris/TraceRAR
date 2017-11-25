@@ -1,7 +1,7 @@
 TraceRAR
 ========
 
-Performance evaluation tool by replaying I/O block traces
+Performance evaluation tool about Replaying, Analyzing and Regenerating I/O block traces
 
 Authors: Bingzhe Li, Farnaz Toussi, Clark Anderson, David Lilja, David Du, and Alireza Haghdoost
 
@@ -12,7 +12,7 @@ http://cris.cs.umn.edu
 About
 ========
 
-The purpose of this project is using I/O workload analyzer/replayer tells customer how the application's storage performance will change on new system without running Customer’s actual application. The implementation of replayer tool is capable of replaying block I/O traces across different operating systems and architectures such as AIX and linux OSes and x86 and ppc architectures. In addition. the tool provides the performance reports after finishing replaying. The performance metrics include total replaying execution time, average I/O execution time, issue error, etc. Each operating system contains different functions, libraries and may also cause fidelity variance. 
+The purpose of this project is using I/O workload analyzer/replayer tells customer how the application's storage performance will change on new system without running Customer’s actual application. The implementation of replayer tool is capable of replaying block I/O traces across different operating systems and architectures such as AIX and linux OSes and x86 and ppc architectures. In addition. the tool provides the performance reports after finishing replaying. The performance metrics include total replaying execution time, average I/O execution time, issue error, etc. Each operating system contains different functions, libraries and may also cause fidelity variance. The regenerator can build a longer trace according to the characterisitic of the original trace. 
 
 
 Setup and Run:
@@ -41,7 +41,15 @@ For x86:
 [optional] Change the limitations of request sizes, timestamps and offset in the configuration file sampleConf-sda8.cvs
 5. Go to bin/, type ./run.sh to run the tool.
 
-
+Analyzer and regenerator in Linux_x86 options:
+```
+-rar <Turn on replayer, analyser and regenerator>\n\
+			1: Turn on replayer only\n\
+			2: Turn on analyser only \n\
+			3: Turn on replayer + analyser\n\
+			4: Turn on analyser + regnerator\n\
+			5: All on(replayer + analyser + regenerator)\n\
+```
 Support
 =======
 Please post your question in the github Issues page. 
