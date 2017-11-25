@@ -1,0 +1,75 @@
+System Model: IBM,9117-MMB
+Machine Serial Number: 105098D
+Processor Type: PowerPC_POWER7
+Processor Implementation Mode: POWER 7
+Processor Version: PV_7_Compat
+Number Of Processors: 16
+Processor Clock Speed: 3500 MHz
+CPU Type: 64-bit
+Kernel Type: 64-bit
+LPAR Info: 99 AIXH036
+Memory Size: 8192 MB
+Good Memory Size: 8192 MB
+Platform Firmware level: AM730_087
+Firmware Version: IBM,AM730_087
+Console Login: enable
+Auto Restart: true
+Full Core: false
+ 
+Network Information
+	Host Name: AIXH036
+	IP Address: 68.14.247.225
+	Sub Netmask: 255.255.255.192
+	Gateway: 68.14.247.193
+	Name Server: 68.105.28.11
+	Domain Name: sealinc.org
+ 
+Paging Space Information
+	Total Paging Space: 512MB
+	Percent Used: 3%
+ 
+Volume Groups Information
+============================================================================== 
+Active VGs
+============================================================================== 
+rootvg:
+PV_NAME           PV STATE          TOTAL PPs   FREE PPs    FREE DISTRIBUTION
+hdisk0            active            781         653         156..144..41..156..156
+============================================================================== 
+ 
+INSTALLED RESOURCE LIST
+
+The following resources are installed on the machine.
++/- = Added or deleted from Resource List.
+*   = Diagnostic support not available.
+	
+  Model Architecture: chrp
+  Model Implementation: Multiple Processor, PCI bus
+	
++ sys0                                                            System Object
++ sysplanar0                                                      System Planar
+* vio0                                                            Virtual I/O Bus
+* ent0             U9117.MMB.105098D-V99-C3-T1                    Virtual I/O Ethernet Adapter (l-lan)
+* vscsi0           U9117.MMB.105098D-V99-C2-T1                    Virtual SCSI Client Adapter
+* cd0              U9117.MMB.105098D-V99-C2-T1-L8020000000000000  Virtual SCSI Optical Served by I5/OS
+* hdisk0           U9117.MMB.105098D-V99-C2-T1-L8000000000000000  Virtual SCSI Disk Drive
+* vsa0             U9117.MMB.105098D-V99-C0                       LPAR Virtual Serial Adapter
+* vty0             U9117.MMB.105098D-V99-C0-L0                    Asynchronous Terminal
++ L2cache0                                                        L2 Cache
++ mem0                                                            Memory
++ proc0                                                           Processor
++ proc4                                                           Processor
++ proc8                                                           Processor
++ proc12                                                          Processor
++ proc16                                                          Processor
++ proc20                                                          Processor
++ proc24                                                          Processor
++ proc28                                                          Processor
++ proc32                                                          Processor
++ proc36                                                          Processor
++ proc40                                                          Processor
++ proc44                                                          Processor
++ proc48                                                          Processor
++ proc52                                                          Processor
++ proc56                                                          Processor
++ proc60                                                          Processor
