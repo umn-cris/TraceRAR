@@ -29,7 +29,7 @@ libaio-devel install
       2.	Find a applicable disk partition, e.g. /dev/sda1
       3.	Change the sampleConf-sda8.cvs file in /bin using the selected partition
       4.	Change the value in line 181 in file /xxx_PPC/c/HFPlayerUtils.cc to match the disk configuration
-      5.	Change the value of field “RANGE_NBYTES.I” in /bin/ sampleConf-sda8.cvs to match selected partition range referring to slides page 11 in 20150714.pptx
+      5.	Change the value of field “RANGE_NBYTES.I” in /bin/ sampleConf-sda8.cvs to match selected partition range
       6.	In terminal, go to /xxx_PPC/, type “make”
       7.	In terminal, go to /xxx_PPC/bin, type”./run.sh” to run the tool.
 
