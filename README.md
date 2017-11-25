@@ -12,7 +12,7 @@ http://cris.cs.umn.edu
 About
 ========
 
-The purpose of this project is using I/O workload analyzer/replayer tells customer how the application's storage performance will change on new system without running Customer’s actual application. The implementation of replayer tool is to use the existing CRIS storage I/O hfreplay to run on PowerPC systems. The challenge of this project is to support different operating systems such LINUX and AIX OS. Each operating system contains different functions, libraries and may also cause fidelity variance. 
+The purpose of this project is using I/O workload analyzer/replayer tells customer how the application's storage performance will change on new system without running Customer’s actual application. The implementation of replayer tool is capable of replaying block I/O traces across different operating systems and architectures such as AIX and linux OSes and x86 and ppc architectures. In addition. the tool provides the performance reports after finishing replaying. The performance metrics include total replaying execution time, average I/O execution time, issue error, etc. Each operating system contains different functions, libraries and may also cause fidelity variance. 
 
 
 Setup and Run:
