@@ -43,12 +43,12 @@ For x86:
 
 Analyzer and regenerator in Linux_x86 options:
 ```
--rar <Turn on replayer, analyser and regenerator>\n\
-			1: Turn on replayer only\n\
-			2: Turn on analyser only \n\
-			3: Turn on replayer + analyser\n\
-			4: Turn on analyser + regnerator\n\
-			5: All on(replayer + analyser + regenerator)\n\
+-rar <Turn on replayer, analyser and regenerator>
+			1: Turn on replayer only
+			2: Turn on analyser only
+			3: Turn on replayer + analyser
+			4: Turn on analyser + regnerator
+			5: All on(replayer + analyser + regenerator)
 ```
 Support
 =======
