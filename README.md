@@ -72,6 +72,7 @@ Citation and related work
 This work is published in the 12th International Conference on Networking, Architecture, and Storage (NAS'2017) with title "TraceRAR: An I/O Performance Evaluation Tool for Replaying, Analyzing, and Regenerating Traces". (http://ieeexplore.ieee.org/abstract/document/8026880/)
 
 Please cite the work if you use the tool:
+```
 @inproceedings{li2017tracerar,
   title={TraceRAR: An I/O Performance Evaluation Tool for Replaying, Analyzing, and Regenerating Traces},
   author={Li, Bingzhe and Toussi, Farnaz and Anderson, Clark and Lilja, David J and Du, David HC},
@@ -80,7 +81,7 @@ Please cite the work if you use the tool:
   year={2017},
   organization={IEEE}
 }
-
+```
 Please also find the related work, hfplay (https://github.com/umn-cris/hfplayer) and the corresponding paper in the 15th USENIX Conference on File and Storage Technologies (FAST'17). https://www.usenix.org/conference/fast17/technical-sessions/presentation/haghdoost
 
 License
