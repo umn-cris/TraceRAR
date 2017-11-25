@@ -58,7 +58,7 @@ https://github.com/umn-cris/TraceRAR/issues
 
 Citation and related work
 =========
-This work is published in the 12th International Conference on Networking, Architecture, and Storage (NAS'2017) with title "TraceRAR: An I/O Performance Evaluation Tool for Replaying, Analyzing, and Regenerating Traces". (http://ieeexplore.ieee.org/abstract/document/8026880/)
+This work is published in the 12th International Conference on Networking, Architecture, and Storage (NAS'2017) with the title "TraceRAR: An I/O Performance Evaluation Tool for Replaying, Analyzing, and Regenerating Traces". (http://ieeexplore.ieee.org/abstract/document/8026880/)
 
 Please cite the work if you use the tool:
 ```
