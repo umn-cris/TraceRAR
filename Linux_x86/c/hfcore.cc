@@ -342,24 +342,7 @@ public:
             exit (EXIT_FAILURE);
         }
 
-		int fd;
-			char * myfifo = "/tmp/myfifo";
-			char buf[10];
-			 int temp;
-			 
-			
-			printf("Waitting for receive network signal\n");
-			while(temp != 1){
-				fd = open(myfifo, O_RDONLY);
-				read(fd, buf, 10);
-				temp = atoi(buf);
-				//printf("Received: %s %u\n", buf, temp);
-				//printf("Received: %s, start replaying\n", buf);
-				close(fd);
-				
-			}
-			
-		printf("Received the network signal\n");
+
 		
         replaySetup();
         /* construct IO queue(s) as needed */
