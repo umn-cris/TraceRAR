@@ -17,18 +17,18 @@ The purpose of this project is using I/O workload analyzer/replayer tells custom
 
 Setup:
 ========
-1. 	Copy, or git, directory structure to system under test.
+1. Copy, or git, directory structure to system under test.
 Remaining steps are different for various processor architecture and operating system combinations.
 
 For Linux on Power or x86:
-	2.	Install necessary libaio tool:
-	```
-			libaio-devel install
-			yum install libaio-devel
-	```
-	3.	Build code, if needed:
-		A.	Change the "DISK_BLOCK_SIZE" constant value in file ../c/IOLogDumpSchema.h to match the block length of the devices to be tested. The units are bytes. 
-		B.	From the directory containing the 'Makefile' file, run 'make'.   
+2. Install necessary libaio tool:
+```
+libaio-devel install
+yum install libaio-devel
+```
+3. Build code, if needed:
+ A. Change the "DISK_BLOCK_SIZE" constant value in file ../c/IOLogDumpSchema.h to match the block length of the devices to be tested. The units are bytes. 
+ B. From the directory containing the 'Makefile' file, run 'make'.
 
 
 For AIX on Power:
