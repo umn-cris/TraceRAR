@@ -59,8 +59,8 @@ For AIX on Power:
 ```
   2. They can be installed with the "rpm -ihv nnnnnn.rpm" command or with smit software installation menu options.	
   3. Build code, if needed:	
-   1. In terminal, go to main directory. For Linux use /LINUX_PPC/ or /LINUX_X86/. For AIX use /AIX_PPC/. 
-   2. Type make for Linux or gmake for AIX.
+   * In terminal, go to main directory. For Linux use /LINUX_PPC/ or /LINUX_X86/. For AIX use /AIX_PPC/. 
+   * Type make for Linux or gmake for AIX.
 		   
 
 Run:
@@ -68,13 +68,13 @@ Run:
 Running hfreplayer:
 1. Check disk information:
 ```
-      		On Linux you can use: sudo fdisk -l -u
-      		On AIX you can use: lsdev 
+On Linux you can use: sudo fdisk -l -u
+On AIX you can use: lsdev 
 ```	
 2. Choose names of applicable disk partition(s) to excerise, e.g. /dev/sda1 for Linux or /dev/rhdisk12 for AIX
-```
-      		Note: The partitions under test should not have data that you need to keep. TraceRAR might overwrite AND destroy filesystems on your partition.
-```	
+
+   Note: The partitions under test should not have data that you need to keep. TraceRAR might overwrite AND destroy filesystems on your partition.
+	
 3. Edit the last column in the config file, such as sampleConf-sda8.cvs, in /bin to use the selected partition(s)
       
 4. Change the value of field RANGE_NBYTES.I in config file to match selected partition range
