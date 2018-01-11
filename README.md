@@ -30,11 +30,12 @@ yum install libaio-devel
 ```
 
 3. Build code, if needed:
-  1. Change the "DISK_BLOCK_SIZE" constant value in file ../c/IOLogDumpSchema.h to match the block length of the devices to be tested. The units are bytes. 
-  2. From the directory containing the 'Makefile' file, run 'make'.
+ 1. Change the "DISK_BLOCK_SIZE" constant value in file ../c/IOLogDumpSchema.h to match the block length of the devices to be tested. The units are bytes. 
+ 2. From the directory containing the 'Makefile' file, run 'make'.
 
 
 For AIX on Power:
+
 2. Install necessary Open Source Linux application packages for AIX
   1. They can be found here --> http://www-03.ibm.com/systems/power/software/aix/linux/
   The list of require packages is for version of AIX 7.1 or later are:
@@ -56,11 +57,10 @@ For AIX on Power:
 				zlib-1.2.4-2.aix5.1.ppc.rpm
 				(Use later versions if they exist.)
 ```
-  2. They can be installed with the "rpm -ihv nnnnnn.rpm" command or with smit software installation menu options.
-		
- 3.	Build code, if needed:	
-		A. In terminal, go to main directory. For Linux use /LINUX_PPC/ or /LINUX_X86/. For AIX use /AIX_PPC/. 
-		B. Type make for Linux or gmake for AIX.
+  2. They can be installed with the "rpm -ihv nnnnnn.rpm" command or with smit software installation menu options.	
+  3. Build code, if needed:	
+   1. In terminal, go to main directory. For Linux use /LINUX_PPC/ or /LINUX_X86/. For AIX use /AIX_PPC/. 
+   2. Type make for Linux or gmake for AIX.
 		   
 
 Run:
