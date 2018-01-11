@@ -22,39 +22,44 @@ Setup:
 Remaining steps are different for various processor architecture and operating system combinations.
 
 For Linux on Power or x86:
-2.	Install necessary libaio tool:
-		libaio-devel install
-		yum install libaio-devel
-		
-3.	Build code, if needed:
-	A.	Change the "DISK_BLOCK_SIZE" constant value in file ../c/IOLogDumpSchema.h to match the block length of the devices to be tested. The units are bytes. 
-	B.	From the directory containing the 'Makefile' file, run 'make'.   
+	2.	Install necessary libaio tool:
+	```
+			libaio-devel install
+			yum install libaio-devel
+	```
+			
+	3.	Build code, if needed:
+		A.	Change the "DISK_BLOCK_SIZE" constant value in file ../c/IOLogDumpSchema.h to match the block length of the devices to be tested. The units are bytes. 
+		B.	From the directory containing the 'Makefile' file, run 'make'.   
 
 
 For AIX on Power:
-2.	Install necessary Open Source Linux application packages for AIX
-	A. They can be found here --> http://www-03.ibm.com/systems/power/software/aix/linux/
-		The list of require packages is for version of AIX 7.1 or later are:
-	    	bash-4.3-17.aix5.1.ppc.rpm
-	    	binutils-2.14-4.aix6.1.ppc.rpm
-	    	gcc-4.8.3-1.aix7.1.ppc.rpm
-	    	gcc-c++-4.8.3-1.aix7.1.ppc.rpm
-	    	gcc-cpp-4.8.3-1.aix7.1.ppc.rpm
-	    	gettext-0.10.40-8.aix5.2.ppc.rpm
-	    	gmp-6.0.0a-1.aix5.1.ppc.rpm            
-	    	info-5.1-2.aix5.1.ppc.rpm
-	    	libgcc-4.8.3-1.aix7.1.ppc.rpm
-	    	libmpc-1.0.3-1.aix5.1.ppc.rpm
-	    	libstdc++-4.8.3-1.aix7.1.ppc.rpm
-	    	libstdc++-devel-4.8.3-1.aix7.1.ppc.rpm
-	    	make_64-4.1-1.aix5.3.ppc.rpm
-	    	mpfr-3.1.3-1.aix5.1.ppc.rpm
-	    	zlib-1.2.4-2.aix5.1.ppc.rpm
-	    	(Use later versions if they exist.)
-	B. They can be installed with the "rpm -ihv nnnnnn.rpm" command or with smit software installation menu options.
-3.	Build code, if needed:	
-	A. In terminal, go to main directory. For Linux use /LINUX_PPC/ or /LINUX_X86/. For AIX use /AIX_PPC/. 
-	B. Type make for Linux or gmake for AIX.
+	2.	Install necessary Open Source Linux application packages for AIX
+		A. They can be found here --> http://www-03.ibm.com/systems/power/software/aix/linux/
+			The list of require packages is for version of AIX 7.1 or later are:
+			```
+				bash-4.3-17.aix5.1.ppc.rpm
+				binutils-2.14-4.aix6.1.ppc.rpm
+				gcc-4.8.3-1.aix7.1.ppc.rpm
+				gcc-c++-4.8.3-1.aix7.1.ppc.rpm
+				gcc-cpp-4.8.3-1.aix7.1.ppc.rpm
+				gettext-0.10.40-8.aix5.2.ppc.rpm
+				gmp-6.0.0a-1.aix5.1.ppc.rpm            
+				info-5.1-2.aix5.1.ppc.rpm
+				libgcc-4.8.3-1.aix7.1.ppc.rpm
+				libmpc-1.0.3-1.aix5.1.ppc.rpm
+				libstdc++-4.8.3-1.aix7.1.ppc.rpm
+				libstdc++-devel-4.8.3-1.aix7.1.ppc.rpm
+				make_64-4.1-1.aix5.3.ppc.rpm
+				mpfr-3.1.3-1.aix5.1.ppc.rpm
+				zlib-1.2.4-2.aix5.1.ppc.rpm
+				(Use later versions if they exist.)
+			```
+		B. They can be installed with the "rpm -ihv nnnnnn.rpm" command or with smit software installation menu options.
+		
+	3.	Build code, if needed:	
+		A. In terminal, go to main directory. For Linux use /LINUX_PPC/ or /LINUX_X86/. For AIX use /AIX_PPC/. 
+		B. Type make for Linux or gmake for AIX.
 		   
 
 Run:
@@ -116,5 +121,3 @@ License
 =======
 © Regents of the University of Minnesota. This software is licensed under GPL version 3.0 (https://www.gnu.org/licenses/gpl-3.0.en.html).
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
-
-
