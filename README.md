@@ -15,33 +15,66 @@ About
 The purpose of this project is using I/O workload analyzer/replayer tells customer how the application's storage performance will change on new system without running Customer’s actual application. The implementation of replayer tool is capable of replaying block I/O traces across different operating systems and architectures such as AIX and linux OSes and x86 and ppc architectures. In addition. the tool provides the performance reports after finishing replaying. The performance metrics include total replaying execution time, average I/O execution time, issue error, etc. Each operating system contains different functions, libraries and may also cause fidelity variance. The regenerator can build a longer trace according to the characterisitic of the original trace. 
 
 
-Setup and Run:
+Setup:
 ========
-Setup involves different architectures and operating systems.
+1. 	Copy, or git, directory structure to system under test.
 
-For PowerPC:
-1.	Install necessary libaio tool:
-libaio-devel install
-	yum install libaio-devel
-2.	Running hfreplayer:
+Remaining steps are different for various processor architecture and operating system combinations.
+
+For Linux on Power or x86:
+2.	Install necessary libaio tool:
+		libaio-devel install
+		yum install libaio-devel
+3.	Build code, if needed:
+	A.	Change the "DISK_BLOCK_SIZE" constant value in file ../c/IOLogDumpSchema.h to match the block length of the devices to be tested. The units are bytes. 
+	B.	From the directory containing the 'Makefile' file, run 'make'.   
+
+For AIX on Power:
+2.	Install necessary Open Source Linux application packages for AIX
+	A. They can be found here --> http://www-03.ibm.com/systems/power/software/aix/linux/
+		The list of require packages is for version of AIX 7.1 or later are:
+	    	bash-4.3-17.aix5.1.ppc.rpm
+	    	binutils-2.14-4.aix6.1.ppc.rpm
+	    	gcc-4.8.3-1.aix7.1.ppc.rpm
+	    	gcc-c++-4.8.3-1.aix7.1.ppc.rpm
+	    	gcc-cpp-4.8.3-1.aix7.1.ppc.rpm
+	    	gettext-0.10.40-8.aix5.2.ppc.rpm
+	    	gmp-6.0.0a-1.aix5.1.ppc.rpm            
+	    	info-5.1-2.aix5.1.ppc.rpm
+	    	libgcc-4.8.3-1.aix7.1.ppc.rpm
+	    	libmpc-1.0.3-1.aix5.1.ppc.rpm
+	    	libstdc++-4.8.3-1.aix7.1.ppc.rpm
+	    	libstdc++-devel-4.8.3-1.aix7.1.ppc.rpm
+	    	make_64-4.1-1.aix5.3.ppc.rpm
+	    	mpfr-3.1.3-1.aix5.1.ppc.rpm
+	    	zlib-1.2.4-2.aix5.1.ppc.rpm
+	    	(Use later versions if they exist.)
+	B. They can be installed with the "rpm -ihv nnnnnn.rpm" command or with smit software installation menu options.
+3.	Build code, if needed:	
+	A. In terminal, go to main directory. For Linux use /LINUX_PPC/ or /LINUX_X86/. For AIX use /AIX_PPC/. 
+	B. Type make for Linux or gmake for AIX.
+		   
+
+Run:
+========
+Running hfreplayer:
       1.	Check disk information:
-      sudo fdisk –l -u
-      2.	Find a applicable disk partition, e.g. /dev/sda1
-      3.	Change the sampleConf-sda8.cvs file in /bin using the selected partition
-      4.	Change the value in line 181 in file /xxx_PPC/c/HFPlayerUtils.cc to match the disk configuration
-      5.	Change the value of field “RANGE_NBYTES.I” in /bin/ sampleConf-sda8.cvs to match selected partition range
-      6.	In terminal, go to /xxx_PPC/, type “make”
-      7.	In terminal, go to /xxx_PPC/bin, type”./run.sh” to run the tool.
+      		On Linux you can use: sudo fdisk -l -u
+      		On AIX you can use: lsdev 
+      2.	Choose names of applicable disk partition(s) to excerise, e.g. /dev/sda1 for Linux or /dev/rhdisk12 for AIX
+      		Note: The partitions under test should not have data that you need to keep. TraceRAR might overwrite AND destroy filesystems on your partition.
+      3.	Edit the last column in the config file, such as sampleConf-sda8.cvs, in /bin to use the selected partition(s)
+      5.	Change the value of field RANGE_NBYTES.I in config file to match selected partition range
+      6. 	If desired, the following config file parameters can be altered as well: 
+      		A.	Change the value of field XXXXXXX in config file to ______
+      		B.	Change the value of field XXXXXXX in config file to ______
+      		C.	Change the value of field XXXXXXX in config file to ______
+      		D.	Change the value of field XXXXXXX in config file to ______
+      		E.	Change the value of field XXXXXXX in config file to ______
+      7.	In terminal, go to /bin, type ./run.sh to run the tool.
 
-For x86:
-1. Check disk information: sudo fdisk -l
-2. Find an applicable disk partition, e.g. /dev/sda8. Note that your disk partition should not have data since hfplayer might overwrite AND distroy filesystem on your partition.
-3. Change the sampleConf-sda8.cvs file in bin/ using the selected partition
-4. Change to suitable lun numbers in the sampleConf-sda8.cvs
-[optional] Change the limitations of request sizes, timestamps and offset in the configuration file sampleConf-sda8.cvs
-5. Go to bin/, type ./run.sh to run the tool.
 
-Analyzer and regenerator in Linux_x86 options:
+Analyzer and regenerator options:
 ```
 -rar <Turn on replayer, analyser and regenerator>
 			1: Turn on replayer only
@@ -50,7 +83,7 @@ Analyzer and regenerator in Linux_x86 options:
 			4: Turn on analyser + regnerator
 			5: All on(replayer + analyser + regenerator)
 ```
-Support
+Citation
 =======
 Please post your question in the github Issues page. 
 https://github.com/umn-cris/TraceRAR/issues
