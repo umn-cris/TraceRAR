@@ -22,9 +22,11 @@ Setup:
 Remaining steps are different for various processor architecture and operating system combinations.
 
 For Linux on Power or x86:
+
 	2.	Install necessary libaio tool:
 	```
 			libaio-devel install
+			
 			yum install libaio-devel
 	```
 			
@@ -77,11 +79,17 @@ Running hfreplayer:
       5.	Change the value of field RANGE_NBYTES.I in config file to match selected partition range
       
       6. 	If desired, the following config file parameters can be altered as well: 
+	  
       		A.	Change the value of field XXXXXXX in config file to ______
+			
       		B.	Change the value of field XXXXXXX in config file to ______
+			
       		C.	Change the value of field XXXXXXX in config file to ______
+			
       		D.	Change the value of field XXXXXXX in config file to ______
+			
       		E.	Change the value of field XXXXXXX in config file to ______
+			
       7.	In terminal, go to /bin, type ./run.sh to run the tool.
 
 
@@ -121,3 +129,5 @@ License
 =======
 © Regents of the University of Minnesota. This software is licensed under GPL version 3.0 (https://www.gnu.org/licenses/gpl-3.0.en.html).
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+
+
