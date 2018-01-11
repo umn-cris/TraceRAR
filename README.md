@@ -38,7 +38,6 @@ For AIX on Power:
 
 2. Install necessary Open Source Linux application packages for AIX
     1. They can be found here --> http://www-03.ibm.com/systems/power/software/aix/linux/
-  
 ```
 The list of require packages is for version of AIX 7.1 or later are:
 	bash-4.3-17.aix5.1.ppc.rpm
@@ -58,10 +57,10 @@ The list of require packages is for version of AIX 7.1 or later are:
 	zlib-1.2.4-2.aix5.1.ppc.rpm
 	Use later versions if they exist.)
 ```
-  2. They can be installed with the "rpm -ihv nnnnnn.rpm" command or with smit software installation menu options.	
-  3. Build code, if needed:	
-   * In terminal, go to main directory. For Linux use /LINUX_PPC/ or /LINUX_X86/. For AIX use /AIX_PPC/. 
-   * Type make for Linux or gmake for AIX.
+   2. They can be installed with the "rpm -ihv nnnnnn.rpm" command or with smit software installation menu options.	
+   3. Build code, if needed:	
+    * In terminal, go to main directory. For Linux use /LINUX_PPC/ or /LINUX_X86/. For AIX use /AIX_PPC/. 
+    * Type make for Linux or gmake for AIX.
 		   
 
 Run:
