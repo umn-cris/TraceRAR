@@ -37,25 +37,26 @@ yum install libaio-devel
 For AIX on Power:
 
 2. Install necessary Open Source Linux application packages for AIX
-  1. They can be found here --> http://www-03.ibm.com/systems/power/software/aix/linux/
-  The list of require packages is for version of AIX 7.1 or later are:
+    1. They can be found here --> http://www-03.ibm.com/systems/power/software/aix/linux/
+  
 ```
-				bash-4.3-17.aix5.1.ppc.rpm
-				binutils-2.14-4.aix6.1.ppc.rpm
-				gcc-4.8.3-1.aix7.1.ppc.rpm
-				gcc-c++-4.8.3-1.aix7.1.ppc.rpm
-				gcc-cpp-4.8.3-1.aix7.1.ppc.rpm
-				gettext-0.10.40-8.aix5.2.ppc.rpm
-				gmp-6.0.0a-1.aix5.1.ppc.rpm            
-				info-5.1-2.aix5.1.ppc.rpm
-				libgcc-4.8.3-1.aix7.1.ppc.rpm
-				libmpc-1.0.3-1.aix5.1.ppc.rpm
-				libstdc++-4.8.3-1.aix7.1.ppc.rpm
-				libstdc++-devel-4.8.3-1.aix7.1.ppc.rpm
-				make_64-4.1-1.aix5.3.ppc.rpm
-				mpfr-3.1.3-1.aix5.1.ppc.rpm
-				zlib-1.2.4-2.aix5.1.ppc.rpm
-				(Use later versions if they exist.)
+The list of require packages is for version of AIX 7.1 or later are:
+	bash-4.3-17.aix5.1.ppc.rpm
+	binutils-2.14-4.aix6.1.ppc.rpm
+	gcc-4.8.3-1.aix7.1.ppc.rpm
+	gcc-c++-4.8.3-1.aix7.1.ppc.rpm
+	gcc-cpp-4.8.3-1.aix7.1.ppc.rpm
+	gettext-0.10.40-8.aix5.2.ppc.rpm
+	gmp-6.0.0a-1.aix5.1.ppc.rpm
+	info-5.1-2.aix5.1.ppc.rpm
+	libgcc-4.8.3-1.aix7.1.ppc.rpm
+	libmpc-1.0.3-1.aix5.1.ppc.rpm
+	libstdc++-4.8.3-1.aix7.1.ppc.rpm
+	libstdc++-devel-4.8.3-1.aix7.1.ppc.rpm
+	make_64-4.1-1.aix5.3.ppc.rpm
+	mpfr-3.1.3-1.aix5.1.ppc.rpm
+	zlib-1.2.4-2.aix5.1.ppc.rpm
+	Use later versions if they exist.)
 ```
   2. They can be installed with the "rpm -ihv nnnnnn.rpm" command or with smit software installation menu options.	
   3. Build code, if needed:	
