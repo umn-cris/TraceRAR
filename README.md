@@ -17,25 +17,25 @@ The purpose of this project is using I/O workload analyzer/replayer tells custom
 
 Setup:
 ========
-1. Copy, or git, directory structure to system under test.
-Remaining steps are different for various processor architecture and operating system combinations.
+ 1. Copy, or git, directory structure to system under test.
+ Remaining steps are different for various processor architecture and operating system combinations.
 
 For Linux on Power or x86:
-2. Install necessary libaio tool:
+ 2. Install necessary libaio tool:
 ```
 libaio-devel install
 yum install libaio-devel
 ```
-3. Build code, if needed:
+ 3. Build code, if needed:
  A. Change the "DISK_BLOCK_SIZE" constant value in file ../c/IOLogDumpSchema.h to match the block length of the devices to be tested. The units are bytes. 
  B. From the directory containing the 'Makefile' file, run 'make'.
 
 
 For AIX on Power:
-	2.	Install necessary Open Source Linux application packages for AIX
-		A. They can be found here --> http://www-03.ibm.com/systems/power/software/aix/linux/
-			The list of require packages is for version of AIX 7.1 or later are:
-			```
+ 2.	Install necessary Open Source Linux application packages for AIX
+  A. They can be found here --> http://www-03.ibm.com/systems/power/software/aix/linux/
+  The list of require packages is for version of AIX 7.1 or later are:
+```
 				bash-4.3-17.aix5.1.ppc.rpm
 				binutils-2.14-4.aix6.1.ppc.rpm
 				gcc-4.8.3-1.aix7.1.ppc.rpm
@@ -52,10 +52,10 @@ For AIX on Power:
 				mpfr-3.1.3-1.aix5.1.ppc.rpm
 				zlib-1.2.4-2.aix5.1.ppc.rpm
 				(Use later versions if they exist.)
-			```
-		B. They can be installed with the "rpm -ihv nnnnnn.rpm" command or with smit software installation menu options.
+```
+  B. They can be installed with the "rpm -ihv nnnnnn.rpm" command or with smit software installation menu options.
 		
-	3.	Build code, if needed:	
+ 3.	Build code, if needed:	
 		A. In terminal, go to main directory. For Linux use /LINUX_PPC/ or /LINUX_X86/. For AIX use /AIX_PPC/. 
 		B. Type make for Linux or gmake for AIX.
 		   
