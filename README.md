@@ -30,8 +30,8 @@ yum install libaio-devel
 ```
 
 3. Build code, if needed:
- 1. Change the "DISK_BLOCK_SIZE" constant value in file ../c/IOLogDumpSchema.h to match the block length of the devices to be tested. The units are bytes. 
- 2. From the directory containing the 'Makefile' file, run 'make'.
+ * Change the "DISK_BLOCK_SIZE" constant value in file ../c/IOLogDumpSchema.h to match the block length of the devices to be tested. The units are bytes. 
+ * From the directory containing the 'Makefile' file, run 'make'.
 
 
 For AIX on Power:
