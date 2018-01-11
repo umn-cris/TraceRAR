@@ -18,18 +18,14 @@ The purpose of this project is using I/O workload analyzer/replayer tells custom
 Setup:
 ========
 1. 	Copy, or git, directory structure to system under test.
-
 Remaining steps are different for various processor architecture and operating system combinations.
 
 For Linux on Power or x86:
-
 	2.	Install necessary libaio tool:
 	```
 			libaio-devel install
-			
 			yum install libaio-devel
 	```
-			
 	3.	Build code, if needed:
 		A.	Change the "DISK_BLOCK_SIZE" constant value in file ../c/IOLogDumpSchema.h to match the block length of the devices to be tested. The units are bytes. 
 		B.	From the directory containing the 'Makefile' file, run 'make'.   
@@ -129,5 +125,4 @@ License
 =======
 © Regents of the University of Minnesota. This software is licensed under GPL version 3.0 (https://www.gnu.org/licenses/gpl-3.0.en.html).
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
-
 
