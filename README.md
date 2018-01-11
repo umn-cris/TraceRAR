@@ -25,9 +25,11 @@ For Linux on Power or x86:
 2.	Install necessary libaio tool:
 		libaio-devel install
 		yum install libaio-devel
+		
 3.	Build code, if needed:
 	A.	Change the "DISK_BLOCK_SIZE" constant value in file ../c/IOLogDumpSchema.h to match the block length of the devices to be tested. The units are bytes. 
 	B.	From the directory containing the 'Makefile' file, run 'make'.   
+
 
 For AIX on Power:
 2.	Install necessary Open Source Linux application packages for AIX
@@ -61,10 +63,14 @@ Running hfreplayer:
       1.	Check disk information:
       		On Linux you can use: sudo fdisk -l -u
       		On AIX you can use: lsdev 
+		
       2.	Choose names of applicable disk partition(s) to excerise, e.g. /dev/sda1 for Linux or /dev/rhdisk12 for AIX
       		Note: The partitions under test should not have data that you need to keep. TraceRAR might overwrite AND destroy filesystems on your partition.
+		
       3.	Edit the last column in the config file, such as sampleConf-sda8.cvs, in /bin to use the selected partition(s)
+      
       5.	Change the value of field RANGE_NBYTES.I in config file to match selected partition range
+      
       6. 	If desired, the following config file parameters can be altered as well: 
       		A.	Change the value of field XXXXXXX in config file to ______
       		B.	Change the value of field XXXXXXX in config file to ______
