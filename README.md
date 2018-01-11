@@ -17,25 +17,26 @@ The purpose of this project is using I/O workload analyzer/replayer tells custom
 
 Setup:
 ========
- 1. Copy, or git, directory structure to system under test.
+1. Copy, or git, directory structure to system under test.
  
 Remaining steps are different for various processor architecture and operating system combinations.
 
 For Linux on Power or x86:
 
- 2. Install necessary libaio tool:
+2. Install necessary libaio tool:
 ```
 libaio-devel install
 yum install libaio-devel
 ```
- 3. Build code, if needed:
-  A. Change the "DISK_BLOCK_SIZE" constant value in file ../c/IOLogDumpSchema.h to match the block length of the devices to be tested. The units are bytes. 
-  B. From the directory containing the 'Makefile' file, run 'make'.
+
+3. Build code, if needed:
+  1. Change the "DISK_BLOCK_SIZE" constant value in file ../c/IOLogDumpSchema.h to match the block length of the devices to be tested. The units are bytes. 
+  2. From the directory containing the 'Makefile' file, run 'make'.
 
 
 For AIX on Power:
- 2.	Install necessary Open Source Linux application packages for AIX
-  A. They can be found here --> http://www-03.ibm.com/systems/power/software/aix/linux/
+2. Install necessary Open Source Linux application packages for AIX
+  1. They can be found here --> http://www-03.ibm.com/systems/power/software/aix/linux/
   The list of require packages is for version of AIX 7.1 or later are:
 ```
 				bash-4.3-17.aix5.1.ppc.rpm
@@ -55,7 +56,7 @@ For AIX on Power:
 				zlib-1.2.4-2.aix5.1.ppc.rpm
 				(Use later versions if they exist.)
 ```
-  B. They can be installed with the "rpm -ihv nnnnnn.rpm" command or with smit software installation menu options.
+  2. They can be installed with the "rpm -ihv nnnnnn.rpm" command or with smit software installation menu options.
 		
  3.	Build code, if needed:	
 		A. In terminal, go to main directory. For Linux use /LINUX_PPC/ or /LINUX_X86/. For AIX use /AIX_PPC/. 
@@ -65,30 +66,24 @@ For AIX on Power:
 Run:
 ========
 Running hfreplayer:
-      1.	Check disk information:
+1. Check disk information:
       		On Linux you can use: sudo fdisk -l -u
       		On AIX you can use: lsdev 
 		
-      2.	Choose names of applicable disk partition(s) to excerise, e.g. /dev/sda1 for Linux or /dev/rhdisk12 for AIX
+2. Choose names of applicable disk partition(s) to excerise, e.g. /dev/sda1 for Linux or /dev/rhdisk12 for AIX
       		Note: The partitions under test should not have data that you need to keep. TraceRAR might overwrite AND destroy filesystems on your partition.
 		
-      3.	Edit the last column in the config file, such as sampleConf-sda8.cvs, in /bin to use the selected partition(s)
+3.	Edit the last column in the config file, such as sampleConf-sda8.cvs, in /bin to use the selected partition(s)
       
-      5.	Change the value of field RANGE_NBYTES.I in config file to match selected partition range
+4.	Change the value of field RANGE_NBYTES.I in config file to match selected partition range
       
-      6. 	If desired, the following config file parameters can be altered as well: 
-	  
-      		A.	Change the value of field XXXXXXX in config file to ______
-			
-      		B.	Change the value of field XXXXXXX in config file to ______
-			
-      		C.	Change the value of field XXXXXXX in config file to ______
-			
-      		D.	Change the value of field XXXXXXX in config file to ______
-			
-      		E.	Change the value of field XXXXXXX in config file to ______
-			
-      7.	In terminal, go to /bin, type ./run.sh to run the tool.
+5. 	If desired, the following config file parameters can be altered as well: 
+   1.	Change the value of field XXXXXXX in config file to ______
+   2.	Change the value of field XXXXXXX in config file to ______
+   3.	Change the value of field XXXXXXX in config file to ______
+   4.	Change the value of field XXXXXXX in config file to ______
+   5.	Change the value of field XXXXXXX in config file to ______
+   6.	In terminal, go to /bin, type ./run.sh to run the tool.
 
 
 Analyzer and regenerator options:
