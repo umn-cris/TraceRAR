@@ -67,23 +67,25 @@ Run:
 ========
 Running hfreplayer:
 1. Check disk information:
+```
       		On Linux you can use: sudo fdisk -l -u
       		On AIX you can use: lsdev 
-		
+```	
 2. Choose names of applicable disk partition(s) to excerise, e.g. /dev/sda1 for Linux or /dev/rhdisk12 for AIX
+```
       		Note: The partitions under test should not have data that you need to keep. TraceRAR might overwrite AND destroy filesystems on your partition.
-		
-3.	Edit the last column in the config file, such as sampleConf-sda8.cvs, in /bin to use the selected partition(s)
+```	
+3. Edit the last column in the config file, such as sampleConf-sda8.cvs, in /bin to use the selected partition(s)
       
-4.	Change the value of field RANGE_NBYTES.I in config file to match selected partition range
+4. Change the value of field RANGE_NBYTES.I in config file to match selected partition range
       
-5. 	If desired, the following config file parameters can be altered as well: 
-   1.	Change the value of field XXXXXXX in config file to ______
-   2.	Change the value of field XXXXXXX in config file to ______
-   3.	Change the value of field XXXXXXX in config file to ______
-   4.	Change the value of field XXXXXXX in config file to ______
-   5.	Change the value of field XXXXXXX in config file to ______
-   6.	In terminal, go to /bin, type ./run.sh to run the tool.
+5. If desired, the following config file parameters can be altered as well: 
+   1. Change the value of field XXXXXXX in config file to ______
+   2. Change the value of field XXXXXXX in config file to ______
+   3. Change the value of field XXXXXXX in config file to ______
+   4. Change the value of field XXXXXXX in config file to ______
+   5. Change the value of field XXXXXXX in config file to ______
+   6. In terminal, go to /bin, type ./run.sh to run the tool.
 
 
 Analyzer and regenerator options:
