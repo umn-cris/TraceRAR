@@ -99,11 +99,6 @@ Analyzer and regenerator options:
 			4: Turn on analyser + regnerator
 			5: All on(replayer + analyser + regenerator)
 ```
-Citation
-=======
-Please post your question in the github Issues page. 
-https://github.com/umn-cris/TraceRAR/issues
-
 
 Citation and related work
 =========
@@ -121,6 +116,11 @@ Please cite the work if you use the tool:
 }
 ```
 Please also find the related work, hfplayer (https://github.com/umn-cris/hfplayer) and the corresponding paper in the 15th USENIX Conference on File and Storage Technologies (FAST'17). https://www.usenix.org/conference/fast17/technical-sessions/presentation/haghdoost
+
+Issues
+=======
+Please post your question in the github Issues page. 
+https://github.com/umn-cris/TraceRAR/issues
 
 License
 =======
